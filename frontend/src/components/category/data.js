@@ -1,33 +1,35 @@
 export const data = [
     {
         id: 1,
-        name: "Double cheeseeBurger",
-        category: "Burger",
-        image:
-            "https://cdn-icons-png.flaticon.com/128/878/878052.png",
+        name: "salads",
+        category: "salads",
+        image: "https://cdn-icons-png.flaticon.com/128/135/135715.png",
         price: "$$$$",
     },
+
     {
         id: 2,
-        name: "Double cheeseeBurger",
-        category: "Pizza",
+        name: "pizza",
+        category: "pizza",
         image: "https://cdn-icons-png.flaticon.com/128/3595/3595455.png",
         price: "$$$$",
     },
     {
         id: 3,
-        name: "Double cheeseeBurger",
-        category: "Burger",
-        image: "https://cdn-icons-png.flaticon.com/128/878/878052.png",
+        name: "chicken",
+        category: "chicken",
+        image: "https://cdn-icons-png.flaticon.com/128/1046/1046751.png",
         price: "$$$$",
     },
     {
         id: 4,
-        name: "Double cheeseeBurger",
-        category: "Pizza",
-        image: "https://cdn-icons-png.flaticon.com/128/3595/3595455.png",
+        name: "salads",
+        category: "salads",
+        image: "https://cdn-icons-png.flaticon.com/128/1488/1488868.png",
         price: "$$$$",
     },
+
+
     {
         id: 5,
         name: "Double cheeseeBurger",
@@ -38,11 +40,12 @@ export const data = [
     },
     {
         id: 6,
-        name: "Double cheeseeBurger",
-        category: "Pizza",
-        image: "https://cdn-icons-png.flaticon.com/128/3595/3595455.png",
+        name: "chicken",
+        category: "chicken",
+        image: "https://cdn-icons-png.flaticon.com/128/8994/8994380.png",
         price: "$$$$",
     },
+
     {
         id: 7,
         name: "Double cheeseeBurger",
@@ -52,8 +55,52 @@ export const data = [
     },
     {
         id: 8,
+        name: "pizza",
+        category: "pizza",
+        image: "https://cdn-icons-png.flaticon.com/128/3595/3595455.png",
+        price: "$$$$",
+    },
+    {
+        id: 9,
+        name: "salads",
+        category: "salads",
+        image: "https://cdn-icons-png.flaticon.com/128/2515/2515263.png",
+        price: "$$$$",
+    },
+    {
+        id: 10,
+        name: "chicken",
+        category: "chicken",
+        image: "https://cdn-icons-png.flaticon.com/128/737/737956.png",
+        price: "$$$$",
+    },
+    {
+        id: 11,
+        name: "pizza",
+        category: "pizza",
+        image: "https://cdn-icons-png.flaticon.com/128/3595/3595455.png",
+        price: "$$$$",
+    },
+
+    {
+        id: 12,
         name: "Double cheeseeBurger",
-        category: "Pizza",
+        category: "Burger",
+        image:
+            "https://cdn-icons-png.flaticon.com/128/878/878052.png",
+        price: "$$$$",
+    },
+    {
+        id: 13,
+        name: "Double cheeseeBurger",
+        category: "Burger",
+        image: "https://cdn-icons-png.flaticon.com/128/878/878052.png",
+        price: "$$$$",
+    },
+    {
+        id: 8,
+        name: "pizza",
+        category: "pizza",
         image: "https://cdn-icons-png.flaticon.com/128/3595/3595455.png",
         price: "$$$$",
     },

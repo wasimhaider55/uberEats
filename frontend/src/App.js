@@ -1,8 +1,16 @@
+import Headline from "./components/headline/Headline";
+import { HeadlineCard } from "./components/headline/HeadlineCard";
+import Home from "./components/home/Home";
+import { Navbar } from "./components/navbar/Navbar";
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className=' text-red-600'>this is react app</h1>
+    <div>
+      <Navbar />
+      <Home/>
+      {/* <Headline/> */}
+      <HeadlineCard/>
     </div>
   );
 }

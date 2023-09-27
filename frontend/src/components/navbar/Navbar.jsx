@@ -1,8 +1,10 @@
 import React from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
-import { BsFillCartFill } from "react-icons/bs"
+import { BsPeopleFill } from "react-icons/bs"
 import { TbTruckDelivery } from "react-icons/tb"
 import { useState } from 'react';
+import { Link } from "react-router-dom"
+
 
 export const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -28,10 +30,23 @@ export const Navbar = () => {
             </div>
 
             {/* card button */}
-            <button className=' bg-black text-white hidden md:flex items-center p-2 px-4 rounded-full text-xl  '>
-                cart
-                <BsFillCartFill size={25} className=' mr-2' />
-            </button>
+            <div className='flex items-center'>
+                <Link to="/Login">
+                    <h1 className=' bg-red-700 text-white rounded-3xl flex p-3 m-1 text-md text-center  cursor-pointer'>
+                        <BsPeopleFill
+                            size={20}
+                            className=' mr-1 mt-1'
+                        />
+                        Log in
+                    </h1>
+                </Link>
+                <Link to="/Signup">
+                <h1
+                    className=' bg-black text-white rounded-full p-2 py-2 text-lg text-center cursor-pointer '>
+                    Sign up
+                </h1>
+                </Link>
+            </div>
 
             {/* for mobile  */}
 

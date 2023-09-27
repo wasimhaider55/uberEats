@@ -1,20 +1,21 @@
-import Category from "./components/category/Category";
-import Food from "./components/food/Food";
-// import Headline from "./components/headline/Headline";
-import { HeadlineCard } from "./components/headline/HeadlineCard";
 import Home from "./components/home/Home";
-import { Navbar } from "./components/navbar/Navbar";
 import './index.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./screens/Login";
+import Signup from "./screens/Signup";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Home/>
-      {/* <Headline/> */}
-      <HeadlineCard/>
-      <Category/>
-      <Food/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
+        </Routes>
+      </Router>
+
+
     </div>
   );
 }

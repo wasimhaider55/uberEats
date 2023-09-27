@@ -10,7 +10,7 @@ export const Navbar = () => {
     const [nav, setNav] = useState(false);
 
     return (
-        <nav className=' max-w-[1640px] mx-auto flex justify-between items-center p-4'>
+        <nav className=' max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500'>
             <div className=' flex item-center'>
                 {/* left side */}
 
@@ -32,7 +32,7 @@ export const Navbar = () => {
             {/* card button */}
             <div className='flex items-center'>
                 <Link to="/Login">
-                    <h1 className=' bg-red-700 text-white rounded-3xl flex p-3 m-1 text-md text-center  cursor-pointer'>
+                    <h1 className=' bg-white text-black rounded-3xl flex p-3 m-1 text-md text-center  cursor-pointer'>
                         <BsPeopleFill
                             size={20}
                             className=' mr-1 mt-1'

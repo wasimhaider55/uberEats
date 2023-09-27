@@ -4,7 +4,7 @@ export const data = [
         name: "salads",
         category: "salads",
         image: "https://cdn-icons-png.flaticon.com/128/135/135715.png",
-        price: "$$$$",
+        price: "$",
     },
 
     {
@@ -12,21 +12,21 @@ export const data = [
         name: "pizza",
         category: "pizza",
         image: "https://cdn-icons-png.flaticon.com/128/3595/3595455.png",
-        price: "$$$$",
+        price: "$$",
     },
     {
         id: 3,
         name: "chicken",
         category: "chicken",
         image: "https://cdn-icons-png.flaticon.com/128/1046/1046751.png",
-        price: "$$$$",
+        price: "$$$",
     },
     {
         id: 4,
         name: "salads",
         category: "salads",
         image: "https://cdn-icons-png.flaticon.com/128/1488/1488868.png",
-        price: "$$$$",
+        price: "$$$",
     },
 
 
@@ -36,7 +36,7 @@ export const data = [
         category: "Burger",
         image:
             "https://cdn-icons-png.flaticon.com/128/878/878052.png",
-        price: "$$$$",
+        price: "$$",
     },
     {
         id: 6,
@@ -51,14 +51,14 @@ export const data = [
         name: "Double cheeseeBurger",
         category: "Burger",
         image: "https://cdn-icons-png.flaticon.com/128/878/878052.png",
-        price: "$$$$",
+        price: "$$",
     },
     {
         id: 8,
         name: "pizza",
         category: "pizza",
         image: "https://cdn-icons-png.flaticon.com/128/3595/3595455.png",
-        price: "$$$$",
+        price: "$",
     },
     {
         id: 9,
@@ -72,7 +72,7 @@ export const data = [
         name: "chicken",
         category: "chicken",
         image: "https://cdn-icons-png.flaticon.com/128/737/737956.png",
-        price: "$$$$",
+        price: "$$$",
     },
     {
         id: 11,
@@ -88,7 +88,7 @@ export const data = [
         category: "Burger",
         image:
             "https://cdn-icons-png.flaticon.com/128/878/878052.png",
-        price: "$$$$",
+        price: "$$$",
     },
     {
         id: 13,

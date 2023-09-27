@@ -12,7 +12,7 @@ const Category = () => {
                     data.map((item, index) => (
                         <div
                             key={index}
-                            className=' bg-gray-200 rounded-lg p-4 flex justify-between items-center'
+                            className=' bg-gray-200 rounded-lg sm:p-4 flex justify-between items-center'
                         >
 
                             <h1 className=' font-bold  text-sm md:text-lg'>{item.name}</h1>

@@ -12,7 +12,7 @@ export const Navbar = () => {
             <div className=' flex item-center'>
                 {/* left side */}
 
-                <div onClick={() => setNav(!nav)} className=' md:hidden cursor-pointer'>
+                <div onClick={() => setNav(!nav)} className=' cursor-pointer'>
                     <AiOutlineMenu size={40} />
                 </div>
 

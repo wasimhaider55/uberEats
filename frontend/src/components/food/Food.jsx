@@ -11,18 +11,26 @@ const Food = () => {
                 return item.category === category
             }))
     };
+
+    // Filter by price 
+    const filterPrice = (price) => {
+        setFoods(
+            data.filter((item) => {
+                return item.price === price ;
+            })
+        )
+    }
     return (
         <section className=' max-w-[1640] m-auto  px-4 py-12'>
-            <h1 className=' text-orange-600 font-bold text-4xl text-center'>
+            <h1 className=' text-orange-600 font-bold text-4xl text-center py-8'>
                 Top Rated Manu Items
             </h1>
 
-            {/* Filter Row */}
-            <div className="flex flex-col lg:flex-row  justify-between">
+           
                 {/* Filter types */}
-                <div>
+                <div className=" flex justify-between items-center">
+                    <div>
                     <p className=' font-bold text-gray-700'>Filter Type</p>
-                    <div className=" flex justify-between flex-wrap">
                         <button
                             onClick={() => setFoods(data)}
                             className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
@@ -50,8 +58,37 @@ const Food = () => {
                             Chicken
                         </button>
                     </div>
+
+                    {/* FILTER BY PRICE */}
+                    <div>
+                    <p className=' font-bold text-gray-700'>Filter Price</p>
+                        <button
+                            onClick={() => filterPrice("$")}
+                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
+                        >
+                            $
+                        </button>
+                        <button
+                            onClick={() => filterPrice("$$")}
+                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
+                        >
+                            $$
+                        </button>
+                        <button
+                            onClick={() => filterPrice("$$$")}
+                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
+                        >
+                            $$$
+                        </button>
+                        <button
+                            onClick={() => filterPrice("$$$$")}
+                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
+                        >
+                            $$$$
+                        </button>
+                    </div>
                 </div>
-            </div>
+           
 
 
             <div className=" grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
@@ -59,12 +96,12 @@ const Food = () => {
                     foods.map((item, index) => (
                         <div
                             key={index}
-                            className="border shadow-lg rounded-lg hover:scale-105 duration-300"
+                            className="border shadow-lg rounded-md hover:scale-105 duration-300 "
                         >
                             <img
                                 src={item.image}
                                 alt={item.name}
-                                className=" w-full h-[200px] object-cover rounded-t-lg"
+                                className=" pl-10 md:pl-16 md:w-60 rounded-t-l"
                             />
                             <div className=" flex justify-between px-2 py-4">
                                 <p className=" font-bold ">{item.name}</p>

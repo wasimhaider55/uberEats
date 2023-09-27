@@ -1,9 +1,82 @@
-import React from 'react'
-
+import React from 'react';
+import { AiFillFacebook, AiFillLinkedin, AiFillGoogleCircle } from "react-icons/ai"
+import { Link } from "react-router-dom";
 const Signup = () => {
-  return (
-    <div>Signup</div>
-  )
-}
+    return (
+        <main className="flex items-center justify-center h-screen bg-zinc-200 ">
+            <div className="border-2 border-gray-300 bg-white p-4 w-96 shadow-md shadow-slate-600 rounded-xl">
+                {/* from */}
+                <form action="">
+                    <h1 className=' font-bold pb-2 text-2xl tracking-wide text-center'>Signup</h1>
+                    <div className='my-2'>
+                        <p className=' text-zinc-700 font-semibold'>Name :</p>
+                        <input
+                            type="text"
+                            name='name'
+                            placeholder='Enter Full Name'
+                            required
+                            className='border border-gray-400 p-2 w-full focus:outline-none'
+                        />
+                        <p className=' text-zinc-700 font-semibold'>Email :</p>
+                        <input
+                            type="email"
+                            name="email"
+                            autoComplete="email"
+                            required
+                            placeholder='Enter your Email'
+                            className='border border-gray-400 p-2 w-full focus:outline-none'
 
-export default Signup
+                        />
+                    </div>
+                    <div>
+                        <p className=' text-zinc-700 font-semibold'> Create Password :</p>
+                        <input
+                            type="password"
+                            name='password'
+                            placeholder='Enter Password'
+                            required
+                            className=' border border-gray-400 p-2 w-full focus:outline-none'
+                        />
+                        <p className=' text-zinc-700 font-semibold'> Confirm Password :</p>
+                        <input
+                            type="password"
+                            name='confirmPassword'
+                            placeholder='Enter Confirm Password'
+                            required
+                            className=' border border-gray-400 p-2 w-full focus:outline-none'
+                        />
+                    </div>
+                    <div className='flex pt-5 gap-5'>
+                        <input
+                            type="checkbox"
+                            name="rememberMe"
+                        />
+                        <p className=' '>Remember me ?</p>
+                    </div>
+
+                    <div className="mt-4">
+                        <button className="border border-gray-400 bg-blue-700 text-white px-20 p-2 text-xl rounded-full w-full ">
+                            signup
+                        </button>
+                        <p className=' text-end'>Forgot Passowrd?</p>
+                    </div>
+
+                    <p className=' flex justify-center font-bold pb-3'>OR</p>
+
+                    <div className='flex justify-evenly items-center text-3xl pb-3'>
+                        <AiFillFacebook className=' rounded-full text-blue-700 cursor-pointer' />
+                        <AiFillGoogleCircle className=' rounded-full text-orange-700 cursor-pointer' />
+                        <AiFillLinkedin className=' rounded-full text-blue-700 cursor-pointer' />
+                    </div>
+                    <p className=' text-center text-zinc-500'>Already have an account?<Link to="/Login"> <span className=' text-blue-800 font-semibold'>Login now</span> </Link></p>
+
+                </form>
+
+
+
+            </div>
+        </main>
+    );
+};
+
+export default Signup;

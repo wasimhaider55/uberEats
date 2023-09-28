@@ -4,6 +4,7 @@ import {HeadlineCard} from "../headline/HeadlineCard";
 // import Headline from "../headline/Headline";
 import Category from "../category/Category"
 import Food from "../food/Food";
+import Footer from '../footer/Footer';
 
 const home = () => {
   return (
@@ -35,6 +36,7 @@ const home = () => {
       <HeadlineCard />
       <Category />
       <Food />
+      <Footer/>
     </main>
   )
 }

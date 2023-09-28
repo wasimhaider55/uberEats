@@ -33,28 +33,28 @@ const Food = () => {
                     <p className=' font-bold text-gray-700'>Filter Type</p>
                         <button
                             onClick={() => setFoods(data)}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className='sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
                             All
                         </button>
                         <button
                             onClick={() => filterType("Burger")}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className='sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
                             Burgers
                         </button>
                         <button
                             onClick={() => filterType("pizza")}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
                             Pizza
                         </button>
                         <button
                             onClick={() => filterType("salads")}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
                             Salads
                         </button>
                         <button
                             onClick={() =>
                                 filterType("chicken")}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
                             Chicken
                         </button>
                     </div>
@@ -64,25 +64,25 @@ const Food = () => {
                     <p className=' font-bold text-gray-700'>Filter Price</p>
                         <button
                             onClick={() => filterPrice("$")}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
                         >
                             $
                         </button>
                         <button
                             onClick={() => filterPrice("$$")}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
                         >
                             $$
                         </button>
                         <button
                             onClick={() => filterPrice("$$$")}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
                         >
                             $$$
                         </button>
                         <button
                             onClick={() => filterPrice("$$$$")}
-                            className=' m-1 border-2 border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '
                         >
                             $$$$
                         </button>

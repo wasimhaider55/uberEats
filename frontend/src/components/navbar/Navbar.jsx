@@ -24,7 +24,7 @@ export const Navbar = () => {
             </div>
 
             {/* search input */}
-            <div className=' bg-gray-200 rounded-full flex px-2 w-[200px] sm:w-[400x] lg:w-[500px] p-2'>
+            <div className=' bg-gray-200 rounded-full hidden md:flex px-2 w-[200px] sm:w-[400x] lg:w-[500px] p-2'>
                 <AiOutlineSearch size={30} />
                 <input className=' bg-transparent  w-full focus:outline-none' />
             </div>

@@ -43,9 +43,9 @@ const Login = () => {
                     <p className=' flex justify-center font-bold pb-3'>OR</p>
 
                     <div className='flex justify-evenly items-center text-3xl pb-3'>
-                        <AiFillFacebook   className=' rounded-full text-blue-700 cursor-pointer'/>
-                        <AiFillGoogleCircle className=' rounded-full text-orange-700 cursor-pointer'  />
-                        <AiFillLinkedin  className=' rounded-full text-blue-700 cursor-pointer' />
+                      <Link to="https://www.facebook.com/engrWasimKhan55"><AiFillFacebook   className=' rounded-full text-blue-700 cursor-pointer'/></Link>  
+                      <Link to="https://www.google.com">  <AiFillGoogleCircle className=' rounded-full text-orange-700 cursor-pointer'  /> </Link>
+                       <Link to="https://www.linkedin.com/in/wasimhaider55/"> <AiFillLinkedin  className=' rounded-full text-blue-700 cursor-pointer' /> </Link>
                     </div>
                     <p className=' text-center text-zinc-500'>Don't have an account? <Link to="/Signup"> <span className=' text-blue-800 font-semibold'>Signup now</span> </Link></p>
 

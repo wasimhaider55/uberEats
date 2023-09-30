@@ -1,10 +1,8 @@
-import React from 'react'
 import { Navbar } from "../navbar/Navbar";
-import {HeadlineCard} from "../headline/HeadlineCard";
-// import Headline from "../headline/Headline";
 import Category from "../category/Category"
 import Food from "../food/Food";
 import Footer from '../footer/Footer';
+import Product from '../product/Product';
 
 const home = () => {
   return (
@@ -30,13 +28,12 @@ const home = () => {
           />
         </div>
       </section>
-      
+
       {/* other components import here  */}
-      {/* <Headline /> */}
-      <HeadlineCard />
+      <Product/>
       <Category />
       <Food />
-      <Footer/>
+      <Footer />
     </main>
   )
 }

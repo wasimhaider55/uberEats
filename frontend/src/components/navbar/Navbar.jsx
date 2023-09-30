@@ -1,8 +1,9 @@
 import React from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
-import { BsPeopleFill } from "react-icons/bs"
+import { BiSolidUser } from "react-icons/bi"
 import { TbTruckDelivery } from "react-icons/tb"
 import { useState } from 'react';
+import { BsCartCheck } from "react-icons/bs"
 import { Link } from "react-router-dom"
 
 
@@ -10,7 +11,7 @@ export const Navbar = () => {
     const [nav, setNav] = useState(false);
 
     return (
-        <nav className=' max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500'>
+        <nav className=' sticky max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500'>
             <div className=' flex item-center'>
                 {/* left side */}
 
@@ -33,18 +34,18 @@ export const Navbar = () => {
             <div className='flex items-center'>
                 <Link to="/Login">
                     <h1 className=' bg-white text-black rounded-3xl flex p-3 m-1 text-md text-center  cursor-pointer'>
-                        <BsPeopleFill
-                            size={20}
+                        <BiSolidUser
+                            size={18}
                             className=' mr-1 mt-1'
                         />
                         Log in
                     </h1>
                 </Link>
-                <Link to="/Signup">
-                <h1
-                    className=' bg-black text-white rounded-full p-2 py-2 text-lg text-center cursor-pointer '>
-                    Sign up
-                </h1>
+                <Link to="/Cart">
+                    <h1
+                        className=' border text-white rounded-full p-2 py-2 text-lg text-center cursor-pointer '>
+                        <BsCartCheck size={30} />
+                    </h1>
                 </Link>
             </div>
 

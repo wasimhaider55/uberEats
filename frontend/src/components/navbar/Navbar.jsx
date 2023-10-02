@@ -41,6 +41,7 @@ export const Navbar = () => {
                         Log in
                     </h1>
                 </Link>
+                
                 <Link to="/Cart">
                     <h1
                         className=' border text-white rounded-full p-2 py-2 text-lg text-center cursor-pointer '>

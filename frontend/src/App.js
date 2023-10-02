@@ -1,23 +1,25 @@
 import './index.css';
-import Rout from "./components/rout";
-import { ProductData } from './components/product/ProductData';
-import { useState } from 'react';
+import Home from "./components/home/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./screens/Login";
+import Signup from "./screens/Signup";
+import Cart from "./components/cart/Cart";
 
 
-const  App = () => {
-  // add to cart
-  const [cart, setCart] = useState([]);
 
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  }
+const App = () => {
 
-  const [product, setProduct] = useState(ProductData)
   return (
-    <>
-     <Rout product={product} setProduct={setProduct} cart={cart} setCart={setCart} addToCart={addToCart} />
-
-    </>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Cart" element={<Cart />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

@@ -4,7 +4,7 @@ import { ProductData } from './components/product/ProductData';
 import { useState } from 'react';
 
 
-const App = () => {
+const  App = () => {
   // add to cart
   const [cart, setCart] = useState([]);
 
@@ -14,10 +14,10 @@ const App = () => {
 
   const [product, setProduct] = useState(ProductData)
   return (
-    <div>
-      <Rout product={product} setProduct={setProduct} cart={cart} setCart={setCart} addToCart={addToCart} />
+    <>
+     <Rout product={product} setProduct={setProduct} cart={cart} setCart={setCart} addToCart={addToCart} />
 
-    </div>
+    </>
   );
 }
 

@@ -3,9 +3,8 @@ import { ProductData } from './ProductData'
 import { BsCart } from "react-icons/bs";
 import { BiShow } from "react-icons/bi"
 import { AiOutlineClose } from "react-icons/ai"
-import { Link } from 'react-router-dom'
 
-const Product = ({ addToCart }) => {
+const Product = ({addToCart}) => {
     const [detail, setDetail] = useState([]);
     const DetailedPage = (Product) => {
         setDetail([{ ...Product }])
@@ -17,7 +16,7 @@ const Product = ({ addToCart }) => {
             {
                 close ? <div className=' absolute w-[900px] bg-white ml-32 mt-52 z-10 items-center shadow-lg shadow-slate-900 border border-white rounded-lg px-10 py-10'>
                     <div className=' max-w-full'>
-                        <button onClick={() => setClose(false)} > <AiOutlineClose size={30} className=' absolute right-8 top-8' /> </button>
+                        <button onClick={() => setClose(false)} > <AiOutlineClose  size={30} className=' absolute right-8 top-8'/> </button>
                         {
                             detail.map((x) => {
                                 return (
@@ -45,7 +44,7 @@ const Product = ({ addToCart }) => {
             <section className=' flex justify-center items-center px-6 pr-10 py-6'>
                 <div className='grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  my-10 gap-10  '>
                     {
-                        ProductData.map(({ title, index, imageUrl, description, price }) => (
+                      ProductData.map(({ title, index, imageUrl, description, price  }) => (
                             <div
                                 key={index}
                                 className='w-80 h-96 bg-white border rounded-lg shadow-md overflow-hidden hover:cursor-pointer hover:scale-105'
@@ -67,11 +66,11 @@ const Product = ({ addToCart }) => {
                                             <BiShow onClick={() => DetailedPage({ title, index, imageUrl, description, price })} size={25} className='text-gray-700' />
                                         </button>
 
-
-                                        <button className='bg-green-800 text-white rounded-full p-2 hover:scale-110'>
-                                            <BsCart onClick={() => addToCart({ title, index, imageUrl, description, price })} size={25} />
-                                        </button>
-
+                                     
+                                            <button className='bg-green-800 text-white rounded-full p-2 hover:scale-110'>
+                                                <BsCart onClick={() => addToCart({title, index, imageUrl, description, price})} size={25} />
+                                            </button>
+                                    
                                     </div>
                                 </div>
 

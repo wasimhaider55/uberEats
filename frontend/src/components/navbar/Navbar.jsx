@@ -1,17 +1,22 @@
 import React from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
-import { BiSolidUser } from "react-icons/bi"
 import { TbTruckDelivery } from "react-icons/tb"
 import { useState } from 'react';
 import { BsCartCheck } from "react-icons/bs"
 import { Link } from "react-router-dom"
-
+import { CartState } from '../context/Context'
+import { BiSolidUser } from "react-icons/bi"
 
 export const Navbar = () => {
+    const { state: { cart },
+        dispatch
+    } = CartState()
+
+
     const [nav, setNav] = useState(false);
 
     return (
-        <nav className=' sticky max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500'>
+        <nav className=' relative max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500'>
             <div className=' flex item-center'>
                 {/* left side */}
 
@@ -30,25 +35,88 @@ export const Navbar = () => {
                 <input className=' bg-transparent  w-full focus:outline-none' />
             </div>
 
-            {/* card button */}
-            <div className='flex items-center'>
-                <Link to="/Login">
-                    <h1 className=' bg-white text-black rounded-3xl flex p-3 m-1 text-md text-center  cursor-pointer'>
-                        <BiSolidUser
-                            size={18}
-                            className=' mr-1 mt-1'
-                        />
-                        Log in
-                    </h1>
-                </Link>
-                
-                <Link to="/Cart">
-                    <h1
-                        className=' border text-white rounded-full p-2 py-2 text-lg text-center cursor-pointer '>
+            {/* card vs login button */}
+            <div className='flex'>
+                <div className='flex items-center'>
+                    <Link to="/Login">
+                        <h1 className=' bg-white text-black rounded-3xl flex p-3 m-1 text-md text-center  cursor-pointer'>
+                            <BiSolidUser
+                                size={18}
+                                className=' mr-1 mt-1'
+                            />
+                            Log in
+                        </h1>
+                    </Link>
+                </div>
+
+
+                <dp>
+                    <div className='border'>
+                        {/* <p>{cart.length}</p> */}
                         <BsCartCheck size={30} />
-                    </h1>
-                </Link>
+                    </div>
+
+                    <div>
+                        {cart.length > 0 ? (
+                            <div>
+                                {cart.map((prod) => (
+                                    <div
+                                        key={prod.id}
+                                        className="flex items-center justify-between border-b border-gray-300 py-3"
+                                    >
+                                        <div className="flex items-center space-x-4">
+                                            <img
+                                                src={prod.imageUrl}
+                                                className="w-16 h-16 object-cover"
+                                                alt={prod.title}
+                                            />
+                                            <div>
+                                                <span className="text-gray-800 font-semibold">{prod.title}</span>
+                                                <span className="text-gray-600">$ {prod.price}</span>
+                                            </div>
+                                        </div>
+                                        <button
+                                            className="text-red-600 hover:text-red-800 cursor-pointer"
+                                            onClick={() =>
+                                                dispatch({
+                                                    type: "REMOVE_FROM_CART",
+                                                    payload: prod,
+                                                })
+                                            }
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-6 w-6"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth="2"
+                                                    d="M6 18L18 6M6 6l12 12"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                ))}
+                                <Link to="/cart">
+                                    <button className="w-full mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                                        Go To Cart
+                                    </button>
+                                </Link>
+                            </div>
+                        ) : (
+                            <span className="p-10">Cart is Empty!</span>
+                        )}
+                    </div>
+
+                </dp>
+
             </div>
+
+
 
             {/* for mobile  */}
 
@@ -76,6 +144,6 @@ export const Navbar = () => {
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav >
     )
 }

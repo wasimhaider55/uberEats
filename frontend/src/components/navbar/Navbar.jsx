@@ -20,7 +20,7 @@ export const Navbar = () => {
 
     return (
        
-        <nav className={`relative max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500`}>
+        <nav className={`relative max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500 z-10 ${nav ? 'sticky top-0' : 'sticky top-0'}`}>
             <div className=' flex item-center'>
                 {/* left side */}
 
@@ -83,9 +83,9 @@ export const Navbar = () => {
                                                     className=" mx-auto block w-16"
                                                     alt={prod.title}
                                                 />
-                                                <div>
-                                                    <span className="text-gray-800 font-semibold">{prod.title}</span>
-                                                    <span className="text-gray-600">$ {prod.price}</span>
+                                                <div className=''>
+                                                    <span className="text-gray-800 font-semibold pr-2">{prod.title}</span>
+                                                    <span className="text-gray-600"> <h1>RS, {prod.price}</h1> </span>
                                                 </div>
                                             </div>
                                             <button

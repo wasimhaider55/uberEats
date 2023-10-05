@@ -20,11 +20,11 @@ const home = () => {
               The <span className=' text-orange-500'>Best</span>
             </h1>
             <h1 className=' px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold'>
-              Food <span className=' text-orange-500'>Delivered</span>
+              Food <span className=' text-orange-500 '>Delivered</span>
             </h1>
           </div>
           <img
-            src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=600"
+            src="https://media.istockphoto.com/id/1197425461/photo/big-sandwich-hamburger-burger-with-beef-avocado-tomato-and-red-onions-on-light-background.jpg?s=612x612&w=0&k=20&c=yaZJCQ07B1Re5qTKP7leHGiUedloK0ZqX0eF6wQIlFo="
             alt="burger pic"
             className=' w-full max-h-[580px] object-cover '
           />

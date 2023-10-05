@@ -15,7 +15,7 @@ const SinglePorduct = ({ prod }) => {
     return (
         <main>
             {
-                close ? <div className='absolute  sm:top-[525px] sm:right-16 right-3 sm:w-[600px] w-[400px] bg-white ml-32 mt-52 z-10 items-center shadow-lg shadow-slate-900 border border-white rounded-lg px-10 py-10'>
+                close ? <div className='absolute   sm:top-[525px] lg:right-10 sm:right-6 right-14 lg:w-[900px] md:w-[700px] sm:w-[600px] w-[350px] bg-white ml-32 mt-52 z-10 items-center shadow-lg shadow-slate-900 border border-white rounded-lg px-10 sm:py-10'>
                     <div className=' max-w-full'>
                         <button onClick={() => setClose(false)} >
                             <AiOutlineClose size={30}
@@ -24,13 +24,14 @@ const SinglePorduct = ({ prod }) => {
                             detail.map((x) => {
                                 return (
                                     <>
-                                        <div className=' flex justify-start py-10 mt-10'>
-                                            <div className=' w-[250px] h-[250px] '>
-                                                <img src={prod.imageUrl} alt={prod.title} className=' w-96' />
+                                        <div className=' sm:flex  '>
+                                            <div className='  w-[200px] h-[150px] '>
+                                                <img src={prod.imageUrl} alt={prod.title} />
                                             </div>
-                                            <div className=' ml-10  py-1'>
+                                            <div className=' ml-10  pt-10'>
                                                 <h1 className=' sm:text-3xl font-bold'> {prod.title}</h1>
-                                                <h1 className=' text-gray-600'> {prod.description}</h1>
+                                                <h1 className=' text-gray-800  font-semibold'> {prod.description}</h1>
+                                                <p className=' text-gray-600 text-sm'>{prod.info}</p>
                                                 <h1 className=' text-green-500 font-bold text-xl sm:text-2xl'> RS, {prod.price}</h1>
                                                 {
                                                     cart.some((p) => p.id === prod.id) ? (
@@ -40,8 +41,8 @@ const SinglePorduct = ({ prod }) => {
                                                                     type: "REMOVE_FROM_CART",
                                                                     payload: prod,
                                                                 })}
-                                                            className=' bg-red-400 mt-14'>
-                                                            Remove
+                                                            className=' bg-red-500 p-2 rounded-lg border hover:scale-105 my-5 font-semibold'>
+                                                            Remove from cart
                                                         </button>
                                                     ) : (
                                                         <button
@@ -50,13 +51,13 @@ const SinglePorduct = ({ prod }) => {
                                                                     type: "ADD_TO_CART",
                                                                     payload: prod,
                                                                 })}
-                                                            className=' bg-green-300  mt-14'>
-                                                            Added
+                                                            className=' bg-green-500 p-2 rounded-lg border hover:scale-105 my-5 font-semibold'>
+                                                            Add to cart
                                                         </button>
                                                     )
                                                 }
                                             </div>
-                                        </div>
+                                        </div >
                                     </>
                                 )
                             })
@@ -92,8 +93,8 @@ const SinglePorduct = ({ prod }) => {
                                             type: "REMOVE_FROM_CART",
                                             payload: prod,
                                         })}
-                                    className=' bg-red-400'>
-                                    Remove
+                                    className=' bg-red-500 p-2 rounded-lg border hover:scale-105 font-semibold'>
+                                    Remove from cart
                                 </button>
                             ) : (
                                 <button
@@ -102,8 +103,8 @@ const SinglePorduct = ({ prod }) => {
                                             type: "ADD_TO_CART",
                                             payload: prod,
                                         })}
-                                    className=' bg-green-300'>
-                                    Added
+                                    className='  bg-green-500 p-2 rounded-lg border hover:scale-105 font-semibold'>
+                                    Add to cart
                                 </button>
                             )
                         }
@@ -113,7 +114,7 @@ const SinglePorduct = ({ prod }) => {
                     </div>
                 </div>
             </div>
-        </main>
+        </main >
     )
 }
 

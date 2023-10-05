@@ -19,7 +19,8 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className=' relative max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500'>
+       
+        <nav className={`relative max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500`}>
             <div className=' flex item-center'>
                 {/* left side */}
 
@@ -53,12 +54,13 @@ export const Navbar = () => {
                 </div>
 
 
-                <dp className="cart-dropdown relative group">
-                    <div className='border flex' onClick={() => setIsOpen((prev) => !prev)}>
-                        {/* <p>{cart.length}</p> */}
-                        <BsCartCheck size={30}  />
+                <dp className="cart-dropdown relative group ">
+                    <div className=' flex border rounded-full p-2'
+                        onClick={() => setIsOpen((prev) => !prev)}>
+                        <p className=' bg-red-500 text-[13px] px-1 text-white rounded-full items-center absolute top-1 right-9'>{cart.length}</p>
+                        <BsCartCheck size={30} className='mx-5' />
                         {
-                            !isOpen ? (<AiOutlineCaretDown />) : (<AiOutlineCaretUp size={20} />)
+                            !isOpen ? (<AiOutlineCaretDown size={20} className=' mt-1' />) : (<AiOutlineCaretUp size={20} className=' mt-1' />)
                         }
 
 
@@ -66,7 +68,7 @@ export const Navbar = () => {
 
 
                     {isOpen && (
-                        <div className='absolute w-56  z-10 right-0 top-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg'>
+                        <div className='absolute w-56  z-10  right-0  top-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg'>
 
                             {cart.length > 0 ? (
                                 <div>
@@ -75,10 +77,10 @@ export const Navbar = () => {
                                             key={prod.id}
                                             className=""
                                         >
-                                            <div className="">
+                                            <div className="flex justify-center items-center ">
                                                 <img
                                                     src={prod.imageUrl}
-                                                    className=" mx-auto block w-32"
+                                                    className=" mx-auto block w-16"
                                                     alt={prod.title}
                                                 />
                                                 <div>
@@ -87,7 +89,7 @@ export const Navbar = () => {
                                                 </div>
                                             </div>
                                             <button
-                                                className="text-red-600 hover:text-red-800 cursor-pointer"
+                                                className="text-red-600 hover:text-red-800 cursor-pointer "
                                                 onClick={() =>
                                                     dispatch({
                                                         type: "REMOVE_FROM_CART",

@@ -11,6 +11,7 @@ const Context = ({ children }) => {
     id: x.id,
     title: x.title,
     description: x.description,
+    info : x.info,
     imageUrl: x.imageUrl,
     price: x.price
   }));

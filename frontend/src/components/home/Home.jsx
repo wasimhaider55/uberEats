@@ -1,14 +1,14 @@
 import { Navbar } from "../navbar/Navbar";
-// import Category from "../category/Category"
-// import Food from "../food/Food";
-// import Footer from '../footer/Footer';
+import Category from "../category/Category"
+import Food from "../food/Food";
+import Footer from '../footer/Footer';
 // import Product from '../product/Product';
 
 import Hero from "../Hero"
 
 const home = () => {
   return (
-    <main>
+    <main >
       {/* Navbar Import here */}
       <Navbar />
 
@@ -33,10 +33,10 @@ const home = () => {
 
       {/* other components import here  */}
       <Hero/>
-      {/* <Product/> */}
-      {/* <Category />
+      {/* <Product/>  */}
+      <Category />
       <Food />
-      <Footer /> */}
+      <Footer /> 
     </main>
   )
 }

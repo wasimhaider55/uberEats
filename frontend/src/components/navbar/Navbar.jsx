@@ -6,6 +6,7 @@ import { BsCartCheck } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { CartState } from '../context/Context'
 import { BiSolidUser } from "react-icons/bi"
+import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai"
 
 export const Navbar = () => {
     const { state: { cart },
@@ -14,6 +15,8 @@ export const Navbar = () => {
 
 
     const [nav, setNav] = useState(false);
+
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <nav className=' relative max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500'>
@@ -50,67 +53,82 @@ export const Navbar = () => {
                 </div>
 
 
-                <dp>
-                    <div className='border'>
+                <dp className="cart-dropdown relative group">
+                    <div className='border flex' onClick={() => setIsOpen((prev) => !prev)}>
                         {/* <p>{cart.length}</p> */}
-                        <BsCartCheck size={30} />
+                        <BsCartCheck size={30}  />
+                        {
+                            !isOpen ? (<AiOutlineCaretDown />) : (<AiOutlineCaretUp size={20} />)
+                        }
+
+
                     </div>
 
-                    <div>
-                        {cart.length > 0 ? (
-                            <div>
-                                {cart.map((prod) => (
-                                    <div
-                                        key={prod.id}
-                                        className="flex items-center justify-between border-b border-gray-300 py-3"
-                                    >
-                                        <div className="flex items-center space-x-4">
-                                            <img
-                                                src={prod.imageUrl}
-                                                className="w-16 h-16 object-cover"
-                                                alt={prod.title}
-                                            />
-                                            <div>
-                                                <span className="text-gray-800 font-semibold">{prod.title}</span>
-                                                <span className="text-gray-600">$ {prod.price}</span>
-                                            </div>
-                                        </div>
-                                        <button
-                                            className="text-red-600 hover:text-red-800 cursor-pointer"
-                                            onClick={() =>
-                                                dispatch({
-                                                    type: "REMOVE_FROM_CART",
-                                                    payload: prod,
-                                                })
-                                            }
+
+                    {isOpen && (
+                        <div className='absolute w-56  z-10 right-0 top-full mt-2 bg-white border border-gray-300 rounded-lg shadow-lg'>
+
+                            {cart.length > 0 ? (
+                                <div>
+                                    {cart.map((prod) => (
+                                        <div
+                                            key={prod.id}
+                                            className=""
                                         >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-6 w-6"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth="2"
-                                                    d="M6 18L18 6M6 6l12 12"
+                                            <div className="">
+                                                <img
+                                                    src={prod.imageUrl}
+                                                    className=" mx-auto block w-32"
+                                                    alt={prod.title}
                                                 />
-                                            </svg>
+                                                <div>
+                                                    <span className="text-gray-800 font-semibold">{prod.title}</span>
+                                                    <span className="text-gray-600">$ {prod.price}</span>
+                                                </div>
+                                            </div>
+                                            <button
+                                                className="text-red-600 hover:text-red-800 cursor-pointer"
+                                                onClick={() =>
+                                                    dispatch({
+                                                        type: "REMOVE_FROM_CART",
+                                                        payload: prod,
+                                                    })
+                                                }
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth="2"
+                                                        d="M6 18L18 6M6 6l12 12"
+                                                    />
+                                                </svg>
+                                            </button>
+                                            <hr className=' border' />
+                                        </div>
+                                    ))}
+
+                                    <Link to="/cart">
+                                        <button className="w-full mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                                            Go To Cart
                                         </button>
-                                    </div>
-                                ))}
-                                <Link to="/cart">
-                                    <button className="w-full mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
-                                        Go To Cart
-                                    </button>
-                                </Link>
-                            </div>
-                        ) : (
-                            <span className="p-10">Cart is Empty!</span>
-                        )}
-                    </div>
+                                    </Link>
+                                </div>
+                            ) : (
+                                <span className="p-10">Cart is Empty!</span>
+                            )}
+                        </div>
+                    )}
+
+
+
 
                 </dp>
 

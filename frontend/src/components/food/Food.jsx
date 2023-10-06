@@ -28,33 +28,33 @@ const Food = () => {
 
            
                 {/* Filter types */}
-                <div className=" flex justify-between items-center">
+                <div className=" flex justify-between items-center text-sm">
                     <div>
                     <p className=' font-bold text-gray-700'>Filter Type</p>
                         <button
                             onClick={() => setFoods(data)}
-                            className='sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className='sm:m-1 border border-orange-600 text-orange-600 rounded-xl  sm:p-1  hover:bg-orange-600 hover:text-white '>
                             All
                         </button>
                         <button
                             onClick={() => filterType("Burger")}
-                            className='sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className='sm:m-1 border border-orange-600 text-orange-600 rounded-xl sm:p-1 hover:bg-orange-600 hover:text-white'>
                             Burgers
                         </button>
                         <button
                             onClick={() => filterType("pizza")}
-                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-[0.5px] sm:p-1 hover:bg-orange-600 hover:text-white '>
                             Pizza
                         </button>
                         <button
                             onClick={() => filterType("salads")}
-                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-[0.5px] sm:p-1 hover:bg-orange-600 hover:text-white '>
                             Salads
                         </button>
                         <button
                             onClick={() =>
                                 filterType("chicken")}
-                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-1 hover:bg-orange-600 hover:text-white '>
+                            className=' sm:m-1 border border-orange-600 text-orange-600 rounded-xl p-[0.5px] sm:p-1 hover:bg-orange-600 hover:text-white '>
                             Chicken
                         </button>
                     </div>

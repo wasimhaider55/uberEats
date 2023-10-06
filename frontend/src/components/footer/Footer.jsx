@@ -50,7 +50,7 @@ const Footer = () => {
 
             {/* Footer links */}
 
-            <div className=' flex justify-between  py-5 px-4  sm:px-10'>
+            <div className=' flex justify-between  py-5 px-6  sm:px-10  sm:text-lg text-sm gap-3'>
                 <ul>
                     <h1 class=" font-bold">Company</h1>
                     <li>About Us</li>

@@ -32,7 +32,7 @@ export const data = [
 
     {
         id: 5,
-        name: "Double cheeseeBurger",
+        name: "Burger",
         category: "Burger",
         image:
             "https://cdn-icons-png.flaticon.com/128/878/878052.png",
@@ -48,7 +48,7 @@ export const data = [
 
     {
         id: 7,
-        name: "Double cheeseeBurger",
+        name: "Burger",
         category: "Burger",
         image: "https://cdn-icons-png.flaticon.com/128/878/878052.png",
         price: "$$",
@@ -84,7 +84,7 @@ export const data = [
 
     {
         id: 12,
-        name: "Double cheeseeBurger",
+        name: "Burger",
         category: "Burger",
         image:
             "https://cdn-icons-png.flaticon.com/128/878/878052.png",
@@ -92,7 +92,7 @@ export const data = [
     },
     {
         id: 13,
-        name: "Double cheeseeBurger",
+        name: "Burger",
         category: "Burger",
         image: "https://cdn-icons-png.flaticon.com/128/878/878052.png",
         price: "$$$$",

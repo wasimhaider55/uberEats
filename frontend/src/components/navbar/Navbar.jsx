@@ -1,12 +1,15 @@
 import React from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
-import { TbTruckDelivery } from "react-icons/tb"
 import { useState } from 'react';
-import { BsCartCheck } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { CartState } from '../context/Context'
-import { BiSolidUser } from "react-icons/bi"
+import { TbTruckDelivery } from "react-icons/tb"
+import { BsCartCheck } from "react-icons/bs"
+import { BiSolidUser , BiSolidHelpCircle } from "react-icons/bi"
 import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai"
+import { HiCloudDownload} from "react-icons/hi";
+import { FaProductHunt , FaWallet} from "react-icons/fa";
+import { MdFavorite} from "react-icons/md";
 
 export const Navbar = () => {
     const { state: { cart },
@@ -155,12 +158,12 @@ export const Navbar = () => {
                 </h2>
                 <div>
                     <ul className=' flex flex-col p-4 text-gray-800'>
-                        <li className=' text-xl py-4 flex'><TbTruckDelivery size={30} className='mr-4' /> order</li>
-                        <li className=' text-xl py-4 flex'><TbTruckDelivery size={30} className='mr-4' /> order</li>
-                        <li className=' text-xl py-4 flex'><TbTruckDelivery size={30} className='mr-4' /> order</li>
-                        <li className=' text-xl py-4 flex'><TbTruckDelivery size={30} className='mr-4' /> order</li>
-                        <li className=' text-xl py-4 flex'><TbTruckDelivery size={30} className='mr-4' /> order</li>
-                        <li className=' text-xl py-4 flex'><TbTruckDelivery size={30} className='mr-4' /> order</li>
+                        <li className=' text-xl py-4 flex'><TbTruckDelivery size={30} className='mr-4' /> Order</li>
+                        <li className=' text-xl py-4 flex'><MdFavorite size={30} className='mr-4' /> Favorites</li>
+                        <li className=' text-xl py-4 flex'><FaWallet size={30} className='mr-4' /> Wallet</li>
+                        <li className=' text-xl py-4 flex'><BiSolidHelpCircle size={30} className='mr-4' /> Help</li>
+                        <li className=' text-xl py-4 flex'><FaProductHunt size={30} className='mr-4' /> promotions</li>
+                        <li className=' text-xl py-4 flex'><HiCloudDownload size={30} className='mr-4' /> Best Ones</li>
                     </ul>
                 </div>
             </div>

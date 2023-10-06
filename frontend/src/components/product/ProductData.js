@@ -10,7 +10,7 @@ export const ProductData = [
         description: "Classic Italian Delight",
         info: "Originating from Naples, Italy, the Margherita pizza is known for its simplicity and delicious combination of flavors.",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREAvfrlPSKwyKd2K0V_MP8hhXjh9boNfjThQ&usqp=CAU",
-        price: "333"
+        price: "120"
 
     },
     {
@@ -35,35 +35,39 @@ export const ProductData = [
         description: "Sweet & Savory Combo",
         info: "Vegetarian pizza is a great option for those looking for a lighter and meat-free pizza experience.",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncUycHLFjrzGw3n_ofzzKww2BSfoVMWC8WQ&usqp=CAU",
-        price: "555"
+        price: "300"
     },
     {
         id: 5,
-        title: "Sun's Out, BOGO's Out",
-        description: "",
+        title: "Classic Burger",
+        description: "it is very testy ",
+        info: "A delicious beef patty topped with lettuce, tomato, cheese, and special sauce.",
         imageUrl: five,
-        price: "999"
+        price: "599"
     },
     {
         id: 6,
-        title: "Sun's Out, BOGO's Out",
-        description: "Testy",
+        title: "Vegetarian Burger",
+        description: "Veggie Patty, Avocado",
+        info: "A flavorful veggie patty with fresh greens, avocado, and a zesty aioli dressing.",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1T00e9VKCdTV-zzE0DCPVq380zdKaYkwqg&usqp=CAU",
         price: "999"
     },
     {
         id: 7,
-        title: "Sun's Out, BOGO's Out",
-        description: "Testy",
+        title: "Veggie Patty, Avocado",
+        description: "BBQ, Bacon, Cheddar",
+        info: "A smoky barbecue-infused burger topped with crispy bacon and melted cheddar cheese.",
         imageUrl: seven,
-        price: "999"
+        price: "600"
     },
     {
         id: 8,
-        title: "Sun's Out, BOGO's Out",
-        description: "Testy",
+        title: "Mushroom Swiss Burger",
+        description: "Mushroom, Swiss, Beef",
+        info: "A juicy beef patty smothered in sautéed mushrooms and Swiss cheese.",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcpQLDVQOh0I70sq3WGCw-WcECCe1fZwvLSA&usqp=CAU",
-        price: "999"
+        price: "200"
     },
 
 

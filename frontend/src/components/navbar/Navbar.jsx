@@ -44,7 +44,7 @@ export const Navbar = () => {
 
             {/* card vs login button */}
             <div className='flex'>
-                <div className='flex items-center'>
+                <div className=' hidden md:flex items-center'>
                     <Link to="/Login">
                         <h1 className=' bg-white text-black rounded-3xl flex p-3 m-1 text-md text-center  cursor-pointer'>
                             <BiSolidUser

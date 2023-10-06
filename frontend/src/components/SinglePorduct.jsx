@@ -15,7 +15,9 @@ const SinglePorduct = ({ prod }) => {
     return (
         <main>
             {
-                close ? <div className='absolute   sm:top-[525px] lg:right-10 sm:right-6 right-14 lg:w-[900px] md:w-[700px] sm:w-[600px] w-[350px] bg-white ml-32 mt-52 z-10 items-center shadow-lg shadow-slate-900 border border-white rounded-lg px-10 sm:py-10'>
+                close ? <div className='absolute sm:top-[525px] lg:right-10 sm:right-6 right-7 lg:w-[900px]
+                 md:w-[700px] sm:w-[600px] w-[320px] bg-white ml-32 mt-52 z-10 items-center
+                  shadow-sm shadow-slate-900 border border-white rounded-lg px-10 sm:py-10'>
                     <div className=' max-w-full'>
                         <button onClick={() => setClose(false)} >
                             <AiOutlineClose size={30}

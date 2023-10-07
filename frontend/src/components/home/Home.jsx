@@ -2,15 +2,16 @@ import { Navbar } from "../navbar/Navbar";
 import Category from "../category/Category"
 import Food from "../food/Food";
 import Footer from '../footer/Footer';
-// import Product from '../product/Product';
-
 import Hero from "../Hero"
 
 const home = () => {
   return (
     <main >
-      {/* Navbar Import here */}
+
+      {/* Navbar components Import here */}
       <Navbar />
+
+      {/* Home section started form here  */}
 
       <section className=' w-full' >
         <div className=' max-h-[580px] relative'>
@@ -31,12 +32,13 @@ const home = () => {
         </div>
       </section>
 
+
       {/* other components import here  */}
-      <Hero/>
-      {/* <Product/>  */}
+      <Hero />
       <Category />
       <Food />
-      <Footer /> 
+      <Footer />
+
     </main>
   )
 }

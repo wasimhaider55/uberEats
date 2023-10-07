@@ -5,11 +5,11 @@ import { Link } from "react-router-dom"
 import { CartState } from '../context/Context'
 import { TbTruckDelivery } from "react-icons/tb"
 import { BsCartCheck } from "react-icons/bs"
-import { BiSolidUser , BiSolidHelpCircle } from "react-icons/bi"
-import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai"
-import { HiCloudDownload} from "react-icons/hi";
-import { FaProductHunt , FaWallet} from "react-icons/fa";
-import { MdFavorite} from "react-icons/md";
+import { BiSolidUser, BiSolidHelpCircle } from "react-icons/bi"
+import { AiOutlineCaretUp, AiOutlineCaretDown, AiFillDelete } from "react-icons/ai"
+import { HiCloudDownload } from "react-icons/hi";
+import { FaProductHunt, FaWallet } from "react-icons/fa";
+import { MdFavorite } from "react-icons/md";
 
 export const Navbar = () => {
     const { state: { cart },
@@ -18,31 +18,35 @@ export const Navbar = () => {
 
 
     const [nav, setNav] = useState(false);
-
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-       
-        <nav className={`relative max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t from-gray-300 to-gray-500 z-10 ${nav ? 'sticky top-0' : 'sticky top-0'}`}>
+
+        <nav className={`relative max-w-[1640px] mx-auto flex justify-between items-center p-4 bg-gradient-to-t
+         from-gray-300 to-gray-500 z-10 ${nav ? 'sticky top-0' : 'sticky top-0'}`}>
             <div className=' flex item-center'>
+
                 {/* left side */}
 
                 <div onClick={() => setNav(!nav)} className=' cursor-pointer'>
                     <AiOutlineMenu size={40} />
                 </div>
-
                 <h1
                     className=' text-2xl sm:text-3xl lg:text-4xl'>Uber<span className='font-bold'>Eats</span>
                 </h1>
             </div>
 
+
             {/* search input */}
+
             <div className=' bg-gray-200 rounded-full hidden md:flex px-2 w-[200px] sm:w-[400x] lg:w-[500px] p-2'>
                 <AiOutlineSearch size={30} />
                 <input className=' bg-transparent  w-full focus:outline-none' />
             </div>
 
-            {/* card vs login button */}
+
+            {/* right side  card and login button */}
+
             <div className='flex'>
                 <div className=' hidden md:flex items-center'>
                     <Link to="/Login">
@@ -57,16 +61,16 @@ export const Navbar = () => {
                 </div>
 
 
+                {/* cart icon in navbar */}
+
                 <dp className="cart-dropdown relative group ">
-                    <div className=' flex border rounded-full p-2'
+                    <div className='flex border rounded-full p-2'
                         onClick={() => setIsOpen((prev) => !prev)}>
-                        <p className=' bg-red-500 text-[13px] px-1 text-white rounded-full items-center absolute top-1 right-9'>{cart.length}</p>
+                        <p className='bg-red-500 text-[13px] px-1 text-white rounded-full items-center absolute top-1 right-9'>{cart.length}</p>
                         <BsCartCheck size={30} className='mx-5' />
                         {
                             !isOpen ? (<AiOutlineCaretDown size={20} className=' mt-1' />) : (<AiOutlineCaretUp size={20} className=' mt-1' />)
                         }
-
-
                     </div>
 
 
@@ -78,7 +82,6 @@ export const Navbar = () => {
                                     {cart.map((prod) => (
                                         <div
                                             key={prod.id}
-                                            className=""
                                         >
                                             <div className="flex justify-center items-center ">
                                                 <img
@@ -86,13 +89,14 @@ export const Navbar = () => {
                                                     className=" mx-auto block w-16"
                                                     alt={prod.title}
                                                 />
-                                                <div className=''>
+                                                <div>
                                                     <span className="text-gray-800 font-semibold pr-2">{prod.title}</span>
                                                     <span className="text-gray-600"> <h1>RS, {prod.price}</h1> </span>
                                                 </div>
                                             </div>
+
                                             <button
-                                                className="text-red-600 hover:text-red-800 cursor-pointer "
+                                                className="text-gray-600 hover:text-red-800 cursor-pointer "
                                                 onClick={() =>
                                                     dispatch({
                                                         type: "REMOVE_FROM_CART",
@@ -100,21 +104,7 @@ export const Navbar = () => {
                                                     })
                                                 }
                                             >
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    className="h-6 w-6"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth="2"
-                                                        d="M6 18L18 6M6 6l12 12"
-                                                    />
-                                                </svg>
+                                                <AiFillDelete size={20} />
                                             </button>
                                             <hr className=' border' />
                                         </div>
@@ -127,18 +117,12 @@ export const Navbar = () => {
                                     </Link>
                                 </div>
                             ) : (
-                                <span className="p-10">Cart is Empty!</span>
+                                <span className="p-10"> Cart is Empty! </span>
                             )}
                         </div>
                     )}
-
-
-
-
                 </dp>
-
             </div>
-
 
 
             {/* for mobile  */}

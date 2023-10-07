@@ -3,9 +3,9 @@ import { data } from "./data"
 
 const Category = () => {
     return (
-        <div className=''>
+        <div>
             <h1 className=' text-orange-600 font-bold text-4xl text-center py-3'>
-                Top Rated Manu Items
+                Manu Items
             </h1>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-6 px-2'>
                 {
@@ -14,10 +14,8 @@ const Category = () => {
                             key={index}
                             className=' bg-gray-200 rounded-lg sm:p-4 flex justify-between items-center pl-2'
                         >
-
                             <h1 className=' font-bold  text-sm md:text-lg'>{item.name}</h1>
                             <img src={item.image} alt={item.name} className=' w-20' />
-
                         </div>
                     ))
                 }

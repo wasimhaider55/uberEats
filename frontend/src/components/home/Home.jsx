@@ -2,7 +2,7 @@ import { Navbar } from "../navbar/Navbar";
 import Category from "../category/Category"
 import Food from "../food/Food";
 import Footer from '../footer/Footer';
-import Hero from "../Hero"
+import Hero from "../product/Products"
 
 const home = () => {
   return (

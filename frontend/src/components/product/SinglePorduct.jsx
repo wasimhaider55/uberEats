@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BiShow } from "react-icons/bi"
-import { CartState } from './context/Context';
+import { CartState } from '../context/Context';
 import { AiOutlineClose } from "react-icons/ai"
 
 const SinglePorduct = ({ prod }) => {
@@ -12,8 +12,12 @@ const SinglePorduct = ({ prod }) => {
         setClose(true)
     }
     const [close, setClose] = useState(false);
+
     return (
         <main>
+
+            {/* Detail page section when we check the detail of product  */}
+
             {
                 close ? <div className='absolute sm:top-[525px] lg:right-10 sm:right-6 right-7 lg:w-[900px]
                  md:w-[700px] sm:w-[600px] w-[320px] bg-white ml-32 mt-52 z-10 items-center
@@ -28,7 +32,10 @@ const SinglePorduct = ({ prod }) => {
                                     <>
                                         <div className=' sm:flex  '>
                                             <div className='  w-[200px] h-[150px] '>
-                                                <img src={prod.imageUrl} alt={prod.title} />
+                                                <img
+                                                    src={prod.imageUrl}
+                                                    alt={prod.title}
+                                                />
                                             </div>
                                             <div className=' ml-10  pt-10'>
                                                 <h1 className=' sm:text-3xl font-bold'> {prod.title}</h1>
@@ -43,7 +50,7 @@ const SinglePorduct = ({ prod }) => {
                                                                     type: "REMOVE_FROM_CART",
                                                                     payload: prod,
                                                                 })}
-                                                            className=' bg-red-500 p-2 rounded-lg border hover:scale-105 my-5 font-semibold'>
+                                                            className=' bg-red-500 p-2 rounded-lg border  my-5 font-semibold'>
                                                             Remove from cart
                                                         </button>
                                                     ) : (
@@ -53,7 +60,7 @@ const SinglePorduct = ({ prod }) => {
                                                                     type: "ADD_TO_CART",
                                                                     payload: prod,
                                                                 })}
-                                                            className=' bg-green-500 p-2 rounded-lg border hover:scale-105 my-5 font-semibold'>
+                                                            className=' bg-green-500 p-2 rounded-lg border  my-5 font-semibold'>
                                                             Add to cart
                                                         </button>
                                                     )
@@ -69,8 +76,13 @@ const SinglePorduct = ({ prod }) => {
                     : null
             }
 
+            {/* Detail page section when we check the detail of product closed here  */}
 
-            <div className='w-80 h-96 bg-white border rounded-lg shadow-md overflow-hidden hover:cursor-pointer hover:scale-105'>
+
+            
+            {/* all products sections which is  design here  */}
+            
+            <div className='w-80 h-96 bg-white border rounded-lg shadow-md overflow-hidden hover:cursor-pointer'>
                 <img src={prod.imageUrl}
                     alt={prod.title}
                     className='w-full h-60 object-cover'

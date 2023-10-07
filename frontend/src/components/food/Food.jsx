@@ -5,6 +5,7 @@ const Food = () => {
     const [foods, setFoods] = useState(data);
 
     // Filter types like burger , pizza chicken etc 
+    // take a function for filtering and pass category of json data
     const filterType = (category) => {
         setFoods(
             data.filter((item) => {
@@ -20,17 +21,18 @@ const Food = () => {
             })
         )
     }
+
     return (
         <section className=' max-w-[1640] m-auto  px-4 py-12'>
-            <h1 className=' text-orange-600 font-bold text-4xl text-center py-8'>
+             <h1 className=' text-orange-600 font-bold text-4xl text-center py-8'>
                 Top Rated Manu Items
-            </h1>
+             </h1> 
 
-           
                 {/* Filter types */}
                 <div className=" flex justify-between items-center text-sm">
                     <div>
                     <p className=' font-bold text-gray-700'>Filter Type</p>
+
                         <button
                             onClick={() => setFoods(data)}
                             className='sm:m-1 border border-orange-600 text-orange-600 rounded-xl  sm:p-1  hover:bg-orange-600 hover:text-white '>
@@ -91,7 +93,7 @@ const Food = () => {
            
 
 
-            <div className=" grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+             <div className=" grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
                 {
                     foods.map((item, index) => (
                         <div
